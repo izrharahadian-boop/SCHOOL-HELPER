@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#6757e8" />
+  <title>PintarAI — Belajar Jadi Lebih Mudah</title>
+  <meta name="description" content="Teman belajar AI yang membantu memahami materi, membuat rangkuman, latihan soal, dan artikel." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">✦</span><span>Pintar<span class="brand-ai">AI</span></span></a>
+    <nav><a href="#fitur">Fitur</a><a href="#cara-kerja">Cara kerja</a><a href="#mulai">Mulai belajar</a></nav>
+    <a class="top-cta" href="#mulai">Coba sekarang <span>↗</span></a>
+    <button class="menu-btn" aria-label="Buka menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="spark">✦</span> TEMAN BELAJAR GENERASI BARU</div>
+        <h1>Belajar lebih mudah.<br><span>Ingat lebih lama.</span></h1>
+        <p>Foto buku pelajaranmu, lalu ubah materinya menjadi rangkuman, kuis interaktif, dan latihan yang membuat belajar terasa lebih menyenangkan.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#mulai">Mulai belajar gratis <span>→</span></a><a class="text-link" href="#cara-kerja">Lihat cara kerja <span>↓</span></a></div>
+        <div class="trust-row"><div class="avatars"><i>👧</i><i>👦</i><i>🧑</i></div><span><b>Belajar sesuai caramu</b><br>Pelan-pelan sampai paham.</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="float-note note-top">✨ Belajar jadi seru!</div>
+        <div class="phone-card">
+          <div class="phone-head"><span class="tiny-logo">✦</span><span>Ruang Belajar</span><span class="dots">•••</span></div>
+          <div class="lesson-tag">BIOLOGI · KELAS 8</div>
+          <h3>Fotosintesis</h3>
+          <div class="plant-illustration"><div class="sun">☀</div><div class="plant">🌱</div><div class="soil"></div><span class="co2">CO₂</span><span class="o2">O₂</span></div>
+          <div class="mini-summary"><b>Inti materi</b><p>Tumbuhan membuat makanan dengan bantuan cahaya matahari.</p></div>
+          <div class="progress-line"><span></span></div><small>Materi dipahami · 75%</small>
+        </div>
+        <div class="float-note note-bottom"><span>✓</span> 5 soal berhasil dijawab</div>
+        <div class="star star-a">✦</div><div class="star star-b">✧</div>
+      </div>
+    </section>
+
+    <section class="feature-strip" id="fitur">
+      <div><span class="feature-icon purple">📸</span><span><b>Foto materi</b><small>Mulai dari buku sekolahmu</small></span></div>
+      <div><span class="feature-icon yellow">🧠</span><span><b>Pahami konsep</b><small>Penjelasan yang sederhana</small></span></div>
+      <div><span class="feature-icon mint">🎯</span><span><b>Latihan interaktif</b><small>Uji pemahamanmu</small></span></div>
+      <div><span class="feature-icon peach">🌟</span><span><b>Belajar bertahap</b><small>Ingat lebih lama</small></span></div>
+    </section>
+
+    <section class="workspace section" id="mulai">
+      <div class="section-heading">
+        <div class="eyebrow">RUANG BELAJAR PINTARAI</div>
+        <h2>Yuk, mulai dari materi kamu!</h2>
+        <p>Unggah foto halaman buku atau tempel teks pelajaran. Pilih bantuan yang kamu butuhkan.</p>
+      </div>
+      <div class="workspace-grid">
+        <div class="input-panel">
+          <div class="panel-title"><span class="step">1</span><div><b>Masukkan materi</b><small>Foto buku atau tulis materinya</small></div></div>
+          <label class="upload-box" for="photoInput" id="dropZone">
+            <input type="file" id="photoInput" accept="image/*" capture="environment" />
+            <div class="upload-icon">📷</div><b>Foto atau unggah halaman buku</b><span>PNG, JPG, atau WEBP · Maks. 10 MB</span>
+            <em class="upload-action">Pilih foto</em>
+            <img id="photoPreview" alt="Pratinjau foto materi" />
+          </label>
+          <div class="or-divider"><span>ATAU KETIK / TEMPEL MATERI</span></div>
+          <textarea id="materialText" placeholder="Contoh: Fotosintesis adalah proses tumbuhan membuat makanan dengan bantuan cahaya matahari..."></textarea>
+          <div class="field-row">
+            <label>Mata pelajaran<select id="subject"><option>Umum</option><option>Matematika</option><option>IPA</option><option>IPS</option><option>Bahasa Indonesia</option><option>Bahasa Inggris</option><option>Sejarah</option></select></label>
+            <label>Jenjang<select id="grade"><option>SD</option><option selected>SMP</option><option>SMA/SMK</option></select></label>
+          </div>
+        </div>
+        <div class="activity-panel">
+          <div class="panel-title"><span class="step">2</span><div><b>Mau belajar dengan cara apa?</b><small>Pilih aktivitas belajarmu</small></div></div>
+          <div class="activity-options">
+            <button class="activity active" data-mode="summary"><span class="activity-emoji">📖</span><span><b>Rangkuman</b><small>Inti materi dengan bahasa sederhana</small></span><span class="radio"></span></button>
+            <button class="activity" data-mode="quiz"><span class="activity-emoji">🧩</span><span><b>Kuis pilihan ganda</b><small>Uji pemahaman lewat soal</small></span><span class="radio"></span></button>
+            <button class="activity" data-mode="explain"><span class="activity-emoji">💡</span><span><b>Jelaskan kepadaku</b><small>Belajar langkah demi langkah</small></span><span class="radio"></span></button>
+            <button class="activity" data-mode="article"><span class="activity-emoji">✍️</span><span><b>Bantu buat artikel</b><small>Susun ide dan kerangka tulisan</small></span><span class="radio"></span></button>
+            <button class="activity" data-mode="sources"><span class="activity-emoji">🔎</span><span><b>Cari sumber belajar</b><small>Ketahui referensi yang dibutuhkan</small></span><span class="radio"></span></button>
+          </div>
+          <button class="generate-btn" id="generateBtn">Buat sesi belajar <span>→</span></button>
+          <p class="privacy-note">🔒 Materi demo diproses di browser ini. Jangan unggah data pribadi.</p>
+        </div>
+      </div>
+      <div class="result-panel hidden" id="resultPanel" aria-live="polite">
+        <div class="result-top"><div><div class="eyebrow">HASIL SESI BELAJAR</div><h3 id="resultTitle">Materi kamu</h3></div><button class="reset-btn" id="resetBtn">↻ Buat sesi baru</button></div>
+        <div id="resultContent"></div>
+      </div>
+    </section>
+
+    <section class="how section" id="cara-kerja">
+      <div class="section-heading"><div class="eyebrow">SINGKAT DAN MUDAH</div><h2>Tiga langkah menuju paham</h2><p>Belajar tidak harus rumit. Mulai dari hal yang sudah kamu punya.</p></div>
+      <div class="steps">
+        <article><div class="step-art camera-art">📸<span>+</span></div><div class="step-number">LANGKAH 01</div><h3>Masukkan materi</h3><p>Foto halaman buku, unggah catatan, atau tempel teks pelajaran.</p></article>
+        <article><div class="step-art brain-art">🧠<span>✦</span></div><div class="step-number">LANGKAH 02</div><h3>Pilih cara belajar</h3><p>AI membantu menyusun rangkuman, penjelasan, dan latihan sesuai kebutuhan.</p></article>
+        <article><div class="step-art trophy-art">🏆<span>✓</span></div><div class="step-number">LANGKAH 03</div><h3>Latihan sampai paham</h3><p>Jawab kuis, lihat pembahasan, dan ulangi materi yang masih sulit.</p></article>
+      </div>
+    </section>
+
+    <section class="bottom-cta"><div><div class="eyebrow">MULAI DARI SATU HALAMAN</div><h2>Setiap anak punya cara<br>belajar yang berbeda.</h2><p>Temukan cara belajar yang paling cocok untukmu bersama PintarAI.</p></div><a class="light-btn" href="#mulai">Coba ruang belajar <span>→</span></a><div class="cta-doodle">✦</div></section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">✦</span><span>Pintar<span class="brand-ai">AI</span></span></a><span>Belajar lebih mudah, satu langkah setiap hari.</span><small>© 2026 PintarAI · Prototype</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
